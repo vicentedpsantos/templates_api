@@ -1,0 +1,20 @@
+[package]
+name = "email_templates"
+version = "0.1.0"
+authors = ["Vicente <vicentedpsantos@gmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+rocket = { git = "https://github.com/SergioBenitez/Rocket" }
+serde_json = "1.0"
+diesel = { version = "1.4", features = ["sqlite", "r2d2"] }
+serde = {version = "1.0", features = ["derive"]}
+diesel_migrations = "1.4"
+rocket_cors = "0.5.1"
+
+[dependencies.rocket_contrib]
+git = "https://github.com/SergioBenitez/Rocket"
+default-features = false
+features = ["json", "diesel_sqlite_pool"]
